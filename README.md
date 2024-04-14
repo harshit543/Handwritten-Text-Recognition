@@ -8,18 +8,29 @@ The Handwritten Text Recognition Web Application is a Flask-based web applicatio
 Features:
 
 Upload Images: Users can upload images containing handwritten text using the provided file upload form.
+
 Text Recognition: Upon uploading an image, the application processes the image to isolate individual lines of text and passes them through the pretrained TrOCR model for recognition.
+
 Display Results: The recognized text is displayed on the web interface, showing the extracted text from each line of the uploaded image.
+
 Download Text: Users have the option to download the recognized text as a text file. Clicking the "Download Text" button saves the recognized text as a text file for download.
+
 Usage:
 
 Install the required dependencies listed in requirements.txt.
+
 First Run model.py.
+
 Run the Flask application using the command python app.py.
+
 Access the web application in your browser by navigating to http://localhost:5000.
+
 Upload an image containing handwritten text.
+
 View the recognized text displayed on the web interface.
+
 Optionally, download the recognized text as a text file.
+
 Project Structure:
 
 app.py: Flask application handling routing, file upload, text recognition, and text download functionalities.
