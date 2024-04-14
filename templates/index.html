@@ -1,0 +1,56 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image OCR</title>
+</head>
+<body>
+    <h1>Image OCR</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".jpg, .jpeg, .png">
+        <button type="submit">Upload</button>
+    </form>
+    {% if extracted_text %}
+        <h2>Extracted Text:</h2>
+        <p>{{ extracted_text }}</p>
+        <form action="/download" method="post">
+            <input type="hidden" name="text" value="{{ extracted_text }}">
+            <button type="submit">Download Text</button>
+        </form>
+    {% endif %}
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Text Recognition</title>
+</head>
+<body>
+    <h1>Handwritten Text Recognition</h1>
+    
+    <!-- Display the extracted text -->
+    <div>
+        {% if extracted_text %}
+            <h2>Extracted Text:</h2>
+            <ul>
+                {% for text in extracted_text %}
+                    <li>{{ text }}</li>
+                {% endfor %}
+            </ul>
+            <a href="/download?extracted_text={{ extracted_text }}" download="extracted_text.txt">
+                <button>Download Text</button>
+            </a>
+        {% endif %}
+    </div>
+
+    <!-- File upload form -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <button type="submit">Upload Image</button>
+    </form>
+</body>
+</html>
