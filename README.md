@@ -17,19 +17,19 @@ Download Text: Users have the option to download the recognized text as a text f
 
 Usage:
 
-Install the required dependencies listed in requirements.txt.
+1. Install the required dependencies listed in requirements.txt.
 
-First Run model.py.
+2. First Run model.py.
 
-Run the Flask application using the command python app.py.
+3. Run the Flask application using the command python app.py.
 
-Access the web application in your browser by navigating to http://localhost:5000.
+4. Access the web application in your browser by navigating to http://localhost:5000.
 
-Upload an image containing handwritten text.
+5. Upload an image containing handwritten text.
 
-View the recognized text displayed on the web interface.
+6. View the recognized text displayed on the web interface.
 
-Optionally, download the recognized text as a text file.
+7. Optionally, download the recognized text as a text file.
 
 Project Structure:
 
